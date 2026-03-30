@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ian Lima · Parceiro Vale Seguros</title>
+<title>Ian Lima · Parceiro Valle Seguros</title>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -32,15 +32,15 @@ nav.up{background:rgba(250,249,247,.97);border-bottom:1px solid var(--border);ba
 
 /* HERO */
 .hero{min-height:100vh;background:var(--navy);display:grid;grid-template-columns:1fr 1fr;position:relative;overflow:hidden}
-.hero-portrait{position:relative;display:flex;align-items:flex-end;justify-content:center;padding-bottom:60px;background:var(--navy2);overflow:hidden}
+.hero-portrait{position:relative;display:flex;align-items:flex-end;justify-content:center;padding:60px 0 60px 0;background:var(--navy2);overflow:hidden}
 .hero-portrait::after{content:'';position:absolute;right:0;top:0;bottom:0;width:2px;background:linear-gradient(to bottom,transparent,var(--accent),transparent)}
 .portrait-deco-letter{position:absolute;font-family:'Playfair Display',serif;font-size:clamp(260px,30vw,420px);font-weight:900;font-style:italic;color:rgba(255,255,255,.025);top:50%;left:50%;transform:translate(-50%,-50%);line-height:1;pointer-events:none;user-select:none;white-space:nowrap}
-.avatar-wrap{position:relative;z-index:2;display:flex;flex-direction:column;align-items:center;opacity:0;animation:fadeUp .9s .3s forwards}
-.avatar-frame{width:clamp(220px,20vw,300px);aspect-ratio:3/4;background:linear-gradient(160deg,#1e2f50 0%,#0e1728 100%);border:1px solid rgba(255,255,255,.08);position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center}
+.avatar-wrap{position:relative;z-index:2;display:flex;flex-direction:column;align-items:center;opacity:0;animation:fadeUp .9s .3s forwards;width:100%;max-width:300px}
+.avatar-frame{width:100%;aspect-ratio:3/4;background:linear-gradient(160deg,#1e2f50 0%,#0e1728 100%);border:1px solid rgba(255,255,255,.08);position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center}
 .avatar-frame::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 50% 30%,rgba(232,55,42,.12) 0%,transparent 65%);pointer-events:none}
 .avatar-frame img{width:100%;height:100%;object-fit:cover;display:block}
 .avatar-chips{display:flex;gap:8px;margin-top:20px;flex-wrap:wrap;justify-content:center}
-.chip{padding:6px 14px;border:1px solid rgba(255,255,255,.12);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.45)}
+.chip{padding:6px 14px;border:1px solid rgba(255,255,255,.12);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.45);background:rgba(0,0,0,0.2);border-radius:30px}
 
 .hero-text{display:flex;flex-direction:column;justify-content:center;padding:120px 60px 80px 56px;position:relative;z-index:1}
 .hero-eyebrow{display:flex;align-items:center;gap:12px;margin-bottom:28px;opacity:0;animation:fadeUp .7s .2s forwards}
@@ -76,10 +76,6 @@ nav.up{background:rgba(250,249,247,.97);border-bottom:1px solid var(--border);ba
 h2.section-title{font-family:'Playfair Display',serif;font-size:clamp(34px,3.5vw,52px);font-weight:700;line-height:1.1;color:var(--navy);margin-bottom:24px}
 h2.section-title em{font-style:italic;color:var(--accent)}
 .about-text{font-size:15px;line-height:1.95;color:var(--muted);margin-bottom:20px}
-.honest-box{background:var(--navy);padding:28px 32px;margin-top:36px;position:relative;overflow:hidden}
-.honest-box::before{content:'';position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--accent)}
-.honest-box-title{font-family:'Playfair Display',serif;font-size:16px;font-style:italic;color:rgba(255,255,255,.9);margin-bottom:12px}
-.honest-box-text{font-size:13px;line-height:1.85;color:rgba(255,255,255,.5)}
 .side-card{padding:24px;border:1px solid var(--border);margin-bottom:16px;background:#fff;transition:border-color .3s}
 .side-card:hover{border-color:var(--accent)}
 .side-card-icon{width:40px;height:40px;background:var(--off);display:flex;align-items:center;justify-content:center;color:var(--accent);margin-bottom:14px}
@@ -139,6 +135,40 @@ h2.section-title em{font-style:italic;color:var(--accent)}
 .vale-badge-name{font-size:18px;font-weight:600;letter-spacing:.06em;color:var(--navy);display:block}
 .vale-badge-sub{font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);display:block;margin-top:3px}
 
+/* VIDEO SECTION - estilo profissional */
+.video-section{
+  background: #0a0f1c;
+  padding: 80px 56px;
+}
+.video-container{
+  max-width: 1000px;
+  margin: 0 auto;
+  background: #000;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 25px 45px -12px rgba(0,0,0,0.5);
+  transition: transform 0.3s ease;
+}
+.video-container:hover{
+  transform: scale(1.01);
+}
+.video-container video{
+  width: 100%;
+  display: block;
+  background: #000;
+}
+.video-caption{
+  text-align: center;
+  margin-top: 24px;
+  color: var(--muted);
+  font-size: 14px;
+  letter-spacing: 0.5px;
+}
+.video-caption strong{
+  color: var(--accent);
+  font-weight: 500;
+}
+
 /* CONTACT - versão sem formulário */
 .contact{background:var(--navy);display:grid;grid-template-columns:1fr 1fr;align-items:stretch}
 .contact-left{padding:96px 60px;border-right:1px solid rgba(255,255,255,.06);display:flex;flex-direction:column;justify-content:center}
@@ -190,7 +220,8 @@ footer{background:var(--navy2);border-top:1px solid rgba(255,255,255,.06);paddin
 
 @media(max-width:900px){
   nav{padding:18px 20px}nav.up{padding:14px 20px}.nav-links{display:none}
-  .hero{grid-template-columns:1fr}.hero-portrait{min-height:320px;padding-bottom:40px}
+  .hero{grid-template-columns:1fr}
+  .hero-portrait{padding:40px 0 40px 0}
   .hero-text{padding:56px 24px 80px}.hero-name{font-size:52px}
   .partner-badge{position:static;margin-top:28px;align-self:flex-start}
   .about{grid-template-columns:1fr}.about-main,.about-side{padding:56px 24px}
@@ -201,6 +232,7 @@ footer{background:var(--navy2);border-top:1px solid rgba(255,255,255,.06);paddin
   .ian-feature{grid-template-columns:1fr}.ian-feature-visual{min-height:300px}
   .ian-feature-text{padding:56px 24px}
   .parceria{padding:56px 20px}
+  .video-section{padding:56px 20px}
   .contact{grid-template-columns:1fr}.contact-left,.contact-right{padding:56px 24px}
   .contact-left{border-right:none;border-bottom:1px solid rgba(255,255,255,.06)}
   .call-card{padding:32px 24px}
@@ -225,7 +257,7 @@ footer{background:var(--navy2);border-top:1px solid rgba(255,255,255,.06);paddin
     <div class="nav-logo-badge">IL</div>
     <div>
       <span class="nav-brand-name">Ian Lima</span>
-      <span class="nav-brand-sub">Parceiro Vale Seguros</span>
+      <span class="nav-brand-sub">Parceiro Valle Seguros</span>
     </div>
   </a>
   <ul class="nav-links">
@@ -246,10 +278,10 @@ footer{background:var(--navy2);border-top:1px solid rgba(255,255,255,.06);paddin
     <div class="portrait-deco-letter">IL</div>
     <div class="avatar-wrap">
       <div class="avatar-frame">
-        <img src="ianvale.jpeg" alt="Ian Lima - Proteção Veicular Vale Seguros" onerror="this.onerror=null; this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'200\' height=\'200\' viewBox=\'0 0 100 100\'%3E%3Crect width=\'100\' height=\'100\' fill=\'%231a2a45\'/%3E%3Ctext x=\'50\' y=\'55\' font-size=\'14\' fill=\'%23e8372a\' text-anchor=\'middle\' dy=\'.3em\'%3EIAN%3C/text%3E%3C/svg%3E'; this.alt='Ian Lima'">
+        <img src="ianvale.jpeg" alt="Ian Lima - Proteção Veicular Valle Seguros" onerror="this.onerror=null; this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'200\' height=\'200\' viewBox=\'0 0 100 100\'%3E%3Crect width=\'100\' height=\'100\' fill=\'%231a2a45\'/%3E%3Ctext x=\'50\' y=\'55\' font-size=\'14\' fill=\'%23e8372a\' text-anchor=\'middle\' dy=\'.3em\'%3EIAN%3C/text%3E%3C/svg%3E'; this.alt='Ian Lima'">
       </div>
       <div class="avatar-chips">
-        <div class="chip">Parceiro Vale</div>
+        <div class="chip">Parceiro Valle</div>
         <div class="chip">Seg. Veicular</div>
         <div class="chip">Atende via WA</div>
       </div>
@@ -259,7 +291,7 @@ footer{background:var(--navy2);border-top:1px solid rgba(255,255,255,.06);paddin
   <div class="hero-text">
     <div class="hero-eyebrow">
       <div class="eyebrow-dot"></div>
-      <span class="eyebrow-text">Parceiro oficial · Vale Seguros</span>
+      <span class="eyebrow-text">Parceiro oficial · Valle Seguros</span>
     </div>
     <h1 class="hero-name">
       <span class="hero-name-first">Ian</span>
@@ -268,7 +300,7 @@ footer{background:var(--navy2);border-top:1px solid rgba(255,255,255,.06);paddin
     <p class="hero-role">Consultor Independente de Seguros Veiculares</p>
     <div class="hero-divider"></div>
     <p class="hero-headline">"Seu carro protegido, sem enrolação e com quem realmente te atende."</p>
-    <p class="hero-body">Sou parceiro da Vale Seguros e trabalho de forma independente para encontrar a melhor cobertura para o seu veículo. Atendimento direto, cotação gratuita e sem burocracia — porque seguro tem que ser simples.</p>
+    <p class="hero-body">Sou parceiro da Valle Seguros e trabalho de forma independente para encontrar a melhor cobertura para o seu veículo. Atendimento direto, cotação gratuita e sem burocracia — porque seguro tem que ser simples.</p>
     <div class="hero-actions">
       <a href="#contato" class="btn-red">Pedir Cotação Grátis</a>
       <a href="#sobre" class="btn-outline">Conhecer Ian Lima</a>
@@ -277,7 +309,7 @@ footer{background:var(--navy2);border-top:1px solid rgba(255,255,255,.06);paddin
       <svg class="partner-badge-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z"/></svg>
       <div>
         <div class="partner-badge-text">Parceria Oficial</div>
-        <div class="partner-badge-name">Vale Seguros</div>
+        <div class="partner-badge-name">Valle Seguros</div>
       </div>
     </div>
   </div>
@@ -288,17 +320,14 @@ footer{background:var(--navy2);border-top:1px solid rgba(255,255,255,.06);paddin
   </div>
 </section>
 
-<!-- SOBRE -->
+<!-- SOBRE (sem o honest-box removido) -->
 <section class="about" id="sobre">
   <div class="about-main">
     <div class="label r"><div class="label-line"></div><span class="label-text">Quem é Ian Lima</span></div>
     <h2 class="section-title r">Um consultor <em>comprometido</em> com você</h2>
-    <p class="about-text r">Me chamo Ian Lima e sou parceiro independente da Vale Seguros, especializado em seguros de veículos. Entrei nesse mercado com um objetivo claro: oferecer um atendimento diferente — sem pressão, sem letras miúdas escondidas e sem aquela demora chata para ter uma resposta.</p>
+    <p class="about-text r">Me chamo Ian Lima e sou parceiro independente da Valle Seguros, especializado em seguros de veículos. Entrei nesse mercado com um objetivo claro: oferecer um atendimento diferente — sem pressão, sem letras miúdas escondidas e sem aquela demora chata para ter uma resposta.</p>
     <p class="about-text r2">Trabalho de forma autônoma, o que significa que você fala diretamente comigo em todas as etapas. Da cotação até a ativação da apólice, sou eu quem te acompanha. Sem passar por call center, sem esperar dias.</p>
-    <div class="honest-box r3">
-      <div class="honest-box-title">Uma coisa importante de saber:</div>
-      <div class="honest-box-text">Estou começando agora nesse mercado, mas isso é justamente o que me motiva a me dedicar ao máximo em cada cliente. Você não é só um número pra mim — é minha reputação sendo construída um atendimento de cada vez. Meu compromisso com você é total.</div>
-    </div>
+    <!-- honest-box removido -->
   </div>
   <div class="about-side">
     <div class="side-card r">
@@ -309,12 +338,12 @@ footer{background:var(--navy2);border-top:1px solid rgba(255,255,255,.06);paddin
     <div class="side-card r2">
       <div class="side-card-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 6v12m-3-2.818l.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182s2.9-.879 4.006 0l.415.33M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>
       <div class="side-card-title">Cotação Gratuita</div>
-      <div class="side-card-text">Sem nenhum custo. Comparo as melhores opções da Vale Seguros para o seu perfil.</div>
+      <div class="side-card-text">Sem nenhum custo. Comparo as melhores opções da Valle Seguros para o seu perfil.</div>
     </div>
     <div class="side-card r3">
       <div class="side-card-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>
-      <div class="side-card-title">Parceria Oficial Vale</div>
-      <div class="side-card-text">Atuo em parceria com a Vale Seguros — empresa sólida com cobertura em todo o Brasil.</div>
+      <div class="side-card-title">Parceria Oficial Valle</div>
+      <div class="side-card-text">Atuo em parceria com a Valle Seguros — empresa sólida com cobertura em todo o Brasil.</div>
     </div>
   </div>
 </section>
@@ -326,7 +355,7 @@ footer{background:var(--navy2);border-top:1px solid rgba(255,255,255,.06);paddin
       <div class="label r"><div class="label-line"></div><span class="label-text">Coberturas</span></div>
       <h2 class="section-title r">O que você pode <em>contratar</em> comigo</h2>
     </div>
-    <p class="services-desc r">Trabalho com o portfólio completo da Vale Seguros. Encontro a cobertura certa para o seu veículo e orçamento — sem empurrar o que você não precisa.</p>
+    <p class="services-desc r">Trabalho com o portfólio completo da Valle Seguros. Encontro a cobertura certa para o seu veículo e orçamento — sem empurrar o que você não precisa.</p>
   </div>
   <div class="services-grid">
     <div class="svc r"><span class="svc-num">— 01</span><svg class="svc-icon" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z"/></svg><div class="svc-title">Cobertura Compreensiva</div><p class="svc-text">Colisão, roubo, furto, incêndio, alagamento e danos a terceiros em um único plano. A proteção mais completa.</p></div>
@@ -374,7 +403,7 @@ footer{background:var(--navy2);border-top:1px solid rgba(255,255,255,.06);paddin
     </div>
     <div class="ian-detail r3">
       <svg class="ian-detail-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-      <div><span class="ian-detail-label">Tipo de atuação</span><span class="ian-detail-val">Consultor independente · Parceiro Vale Seguros</span></div>
+      <div><span class="ian-detail-label">Tipo de atuação</span><span class="ian-detail-val">Consultor independente · Parceiro Valle Seguros</span></div>
     </div>
   </div>
 </section>
@@ -382,17 +411,30 @@ footer{background:var(--navy2);border-top:1px solid rgba(255,255,255,.06);paddin
 <!-- PARCERIA -->
 <div class="parceria r">
   <div class="parceria-text">
-    <h3>Respaldado pela <em style="font-style:italic;color:var(--accent)">Vale Seguros</em></h3>
-    <p>Atuo em parceria com a Vale Seguros — empresa com estrutura nacional, seguradoras parceiras consolidadas e suporte completo em sinistros. Você tem a segurança de uma marca sólida com o atendimento próximo de um consultor independente.</p>
+    <h3>Respaldado pela <em style="font-style:italic;color:var(--accent)">Valle Seguros</em></h3>
+    <p>Atuo em parceria com a Valle Seguros — empresa com estrutura nacional, seguradoras parceiras consolidadas e suporte completo em sinistros. Você tem a segurança de uma marca sólida com o atendimento próximo de um consultor independente.</p>
   </div>
   <div class="vale-badge">
     <div class="vale-badge-v">V</div>
     <div>
-      <span class="vale-badge-name">Vale Seguros</span>
+      <span class="vale-badge-name">Valle Seguros</span>
       <span class="vale-badge-sub">Parceiro credenciado</span>
     </div>
   </div>
 </div>
+
+<!-- SEÇÃO DE VÍDEO PROFISSIONAL -->
+<section class="video-section">
+  <div class="video-container">
+    <video controls preload="metadata" poster="https://via.placeholder.com/1280x720?text=Valle+Seguros" style="width:100%; display:block;">
+      <source src="videovalle.mp4" type="video/mp4">
+      Seu navegador não suporta vídeos HTML5.
+    </video>
+  </div>
+  <div class="video-caption">
+    <strong>Valle Seguros</strong> — Proteção completa para seu veículo | <span>Assista ao vídeo institucional</span>
+  </div>
+</section>
 
 <!-- CONTATO - sem formulário, com chamada direta -->
 <section class="contact" id="contato">
@@ -433,11 +475,11 @@ footer{background:var(--navy2);border-top:1px solid rgba(255,255,255,.06);paddin
     <div class="footer-dot"></div>
     <div>
       <div class="footer-name">Ian Lima</div>
-      <div class="footer-role">Consultor Parceiro · Vale Seguros</div>
+      <div class="footer-role">Consultor Parceiro · Valle Seguros</div>
     </div>
   </div>
-  <p class="footer-copy">© 2024 · Ian Lima · Parceiro Independente Vale Seguros</p>
-  <div class="footer-vale">Vale Seguros · Proteção em todo o Brasil</div>
+  <p class="footer-copy">© 2024 · Ian Lima · Parceiro Independente Valle Seguros</p>
+  <div class="footer-vale">Valle Seguros · Proteção em todo o Brasil</div>
 </footer>
 
 <script>
